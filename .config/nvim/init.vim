@@ -10,6 +10,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Some general plugins
+Plug 'itchyny/lightline.vim'
+
 " Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
 
@@ -148,6 +151,7 @@ cmp.setup({
 })
 EOF
 
+set noshowmode
 " have a fixed column for the diagnostics to appear in
 " this removes the jitter when warnings/errors flow in
 set signcolumn=yes
