@@ -13,6 +13,11 @@ call plug#begin('~/.vim/plugged')
 " Some general plugins
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
+" Markdown plugins
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'}
 
 " Collection of common configurations for the Nvim LSP client
 Plug 'neovim/nvim-lspconfig'
@@ -154,9 +159,14 @@ EOF
 
 set number
 
+" limelight
+let g:limelight_conceal_ctermfg = 'Gray'
+
 " lightline
 set noshowmode
 let g:lightline = { 'colorscheme': 'nord' }
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " have a fixed column for the diagnostics to appear in
 " this removes the jitter when warnings/errors flow in
