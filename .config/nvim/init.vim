@@ -36,6 +36,9 @@ Plug 'simrat39/rust-tools.nvim'
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
 
+" Autopair
+Plug 'windwp/nvim-autopairs'
+
 " Optional
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -152,6 +155,10 @@ cmp.setup({
     { name = 'buffer' },
   },
 })
+EOF
+
+lua <<EOF
+require('nvim-autopairs').setup{}
 EOF
 
 set number
