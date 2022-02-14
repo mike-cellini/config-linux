@@ -161,6 +161,9 @@ lua <<EOF
 require('nvim-autopairs').setup{}
 EOF
 
+set cursorline
+set termguicolors
+
 set number
 
 " limelight
