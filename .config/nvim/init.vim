@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 " Some general plugins
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -46,6 +47,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Some color scheme other then default
 Plug 'arcticicestudio/nord-vim'
+Plug 'lambdalisue/nerdfont.vim'
 
 call plug#end()
 
@@ -171,7 +173,25 @@ let g:limelight_conceal_ctermfg = 'Gray'
 
 " lightline
 set noshowmode
-let g:lightline = { 'colorscheme': 'nord' }
+let g:lightline = { 
+	\ 'colorscheme': 'nord',
+	\ 'tabline': {
+	\   'left': [['buffers']]
+	\ },
+	\ 'component_expand': {
+	\   'buffers': 'lightline#bufferline#buffers'
+	\ },
+	\ 'component_type': {
+	\ 'buffers': 'tabsel'
+	\ }
+	\ }
+set showtabline=2
+let g:lightline#bufferline#unnamed = 'No Name'
+let g:lightline#bufferline#filename_modifier = ':.'
+let g:lightline#bufferline#more_buffers = '...'
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#enable_nerdfont = 1
+
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
