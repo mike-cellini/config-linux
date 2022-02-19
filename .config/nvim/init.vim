@@ -158,7 +158,7 @@ cmp.setup({
 EOF
 
 lua <<EOF
-require('nvim-autopairs').setup{}
+require('nvim-autopairs').setup()
 EOF
 
 set cursorline
