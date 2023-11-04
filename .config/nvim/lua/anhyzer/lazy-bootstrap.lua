@@ -17,6 +17,10 @@ require("lazy").setup({
 	tag = '0.1.4',
 	dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    'arcticicestudio/nord-vim',
+    {
+	'nvim-treesitter/nvim-treesitter',
+	build = ":TSUpdate"
+    },
+    'shaunsingh/nord.nvim',
     'lambdalisue/nerdfont.vim',
 })

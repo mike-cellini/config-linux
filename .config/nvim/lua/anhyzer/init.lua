@@ -1,6 +1,7 @@
 require("anhyzer.remap")
 require("anhyzer.settings")
 require("anhyzer.lazy-bootstrap")
+require("anhyzer.treesitter")
 require("anhyzer.text")
 require("anhyzer.telescope")
 print("hello from anhyzer")
