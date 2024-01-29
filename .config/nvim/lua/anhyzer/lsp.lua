@@ -23,6 +23,7 @@ require('mason-lspconfig').setup({
         'gopls',
         'html',
         'lua_ls',
+        'marksman',
     },
     handlers = {
         lsp.default_setup,
