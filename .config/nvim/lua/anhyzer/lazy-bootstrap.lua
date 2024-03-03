@@ -36,6 +36,11 @@ require("lazy").setup({
             {'L3MON4D3/LuaSnip'},
         },
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true,
+    },
     'shaunsingh/nord.nvim',
     'lambdalisue/nerdfont.vim',
 })
