@@ -20,7 +20,6 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         'tsserver',
         'rust_analyzer',
-        'gopls',
         'html',
         'lua_ls',
         'marksman',
