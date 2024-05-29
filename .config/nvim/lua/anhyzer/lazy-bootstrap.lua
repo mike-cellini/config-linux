@@ -41,6 +41,12 @@ require("lazy").setup({
         event = "InsertEnter",
         config = true,
     },
-    'shaunsingh/nord.nvim',
+    {
+        'neanias/everforest-nvim',
+        version = false,
+        lazy = false,
+        priority = 1000,
+    },
     'lambdalisue/nerdfont.vim',
 })
+
